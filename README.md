@@ -12,15 +12,8 @@ Using a Python script, the program allows users to filter the data by month and 
 and it computes various descriptive statistics such as popular travel times, stations, trip durations, 
 and user demographics.
 
-### Files Used
-The following files are included in this project:
-
-- `bikeshare_starter.py` — main Python script for interacting with the user and analyzing data  
-- `chicago.csv` — bikeshare data for Chicago  
-- `new_york_city.csv` — bikeshare data for New York City  
-- `washington.csv` — bikeshare data for Washington  
+### Files used
+Include the files used
 
 ### Credits
-This project is part of the Udacity Programming for Data Science with Python Nanodegree.  
-Dataset provided by Motivate, a bike share system provider.  
-Project template and instructions provided by Udacity.
+It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted
