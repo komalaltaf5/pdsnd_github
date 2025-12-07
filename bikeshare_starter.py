@@ -32,7 +32,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
 
 
-    print('-'*40)
+    print_separator()
     return city, month, day
 
 
@@ -68,7 +68,8 @@ def time_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_separator()
+
 
 
 def station_stats(df):
@@ -87,7 +88,8 @@ def station_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_separator()
+
 
 
 def trip_duration_stats(df):
@@ -103,7 +105,8 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_separator()
+
 
 
 def user_stats(df):
@@ -122,7 +125,12 @@ def user_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_separator()
+
+
+def print_separator():
+    """Print a standard separator line."""
+    print('-' * 40)
 
 
 def main():
