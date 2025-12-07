@@ -16,6 +16,13 @@ import time
 import pandas as pd
 import numpy as np
 
+"""
+Bikeshare Data Analysis Script
+
+This script lets the user explore US bikeshare data for Chicago,
+New York City, and Washington.
+"""
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -29,34 +36,20 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
 
+    
     print('Hello! Let\'s explore some US bikeshare data!')
-    print('----------------------------------------')
 
-    # get user input for city
-    while True:
-        city = input("Which city would you like to analyze? Chicago, New York City, or Washington?\n").lower()
-        if city in ('chicago', 'new york city', 'washington'):
-            break
-        else:
-            print("Invalid city. Please choose from Chicago, New York City, or Washington.")
+    # Ask user to select a valid city
+    # (logic will be implemented using a while loop)
+    # e.g., city = input("Choose a city...").lower()
 
-    # get user input for month
-    while True:
-        month = input("Which month? January, February, ... June, or 'all'?\n").lower()
-        if month in ('january', 'february', 'march', 'april', 'may', 'june', 'all'):
-            break
-        else:
-            print("Invalid month. Please choose a month between January and June, or 'all'.")
+    # Ask user to select a valid month
+    # (logic will be implemented using a while loop)
 
-    # get user input for day of week
-    while True:
-        day = input("Which day? Monday, Tuesday, ... Sunday, or 'all'?\n").lower()
-        if day in ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all'):
-            break
-        else:
-            print("Invalid day. Please enter an actual day name or 'all'.")
+    # Ask user to select a valid day of week
+    # (logic will be implemented using a while loop)
 
-    print('-'*40)
+    print_separator()
     return city, month, day
 
 
@@ -82,17 +75,19 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # display the most common month
+    # TODO: Extract month column and compute the most common month.
+    # Example: df['month'].mode()[0]
 
 
-    # display the most common day of week
+    # TODO: Compute the most common day of week.
 
 
-    # display the most common start hour
+    # TODO: Compute the most common start hour.
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_separator()
+
 
 
 def station_stats(df):
@@ -111,7 +106,8 @@ def station_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_separator()
+
 
 
 def trip_duration_stats(df):
@@ -127,7 +123,8 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_separator()
+
 
 
 def user_stats(df):
@@ -146,7 +143,12 @@ def user_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print_separator()
+
+
+def print_separator():
+    """Print a standard separator line."""
+    print('-' * 40)
 
 
 def main():
