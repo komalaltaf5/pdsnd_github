@@ -18,6 +18,13 @@ and user demographics.
 - new_york_city.csv
 - washington.csv
 
+### Usage Example
+To run the program:
+
+1. Open a terminal and navigate to the project folder:
+   ```bash
+   cd pdsnd_github
+
 ### Credits
 This project was completed as part of Udacity's Programming for Data Science with Python Nanodegree.
 Data provided by Motivate.
