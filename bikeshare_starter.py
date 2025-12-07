@@ -22,15 +22,18 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
+    
     print('Hello! Let\'s explore some US bikeshare data!')
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
+    # Ask user to select a valid city
+    # (logic will be implemented using a while loop)
+    # e.g., city = input("Choose a city...").lower()
 
-    # get user input for month (all, january, february, ... , june)
+    # Ask user to select a valid month
+    # (logic will be implemented using a while loop)
 
-
-    # get user input for day of week (all, monday, tuesday, ... sunday)
-
+    # Ask user to select a valid day of week
+    # (logic will be implemented using a while loop)
 
     print_separator()
     return city, month, day
@@ -58,13 +61,14 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # display the most common month
+    # TODO: Extract month column and compute the most common month.
+    # Example: df['month'].mode()[0]
 
 
-    # display the most common day of week
+    # TODO: Compute the most common day of week.
 
 
-    # display the most common start hour
+    # TODO: Compute the most common start hour.
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
