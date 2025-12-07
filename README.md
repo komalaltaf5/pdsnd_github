@@ -12,8 +12,11 @@ Using a Python script, the program allows users to filter the data by month and 
 and it computes various descriptive statistics such as popular travel times, stations, trip durations, 
 and user demographics.
 
-### Files used
-Include the files used
+### Files Used
+- bikeshare_starter.py
+- chicago.csv
+- new_york_city.csv
+- washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted
