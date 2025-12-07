@@ -1,3 +1,17 @@
+"""
+Bikeshare Data Analysis Script
+
+This script allows a user to explore US bikeshare data for Chicago,
+New York City, and Washington. The user can filter by city, month,
+and day of week, and the script calculates summary statistics such as:
+- most common times of travel
+- popular stations and trips
+- trip duration statistics
+- user type, gender, and birth year statistics (where available)
+"""
+
+
+
 import time
 import pandas as pd
 import numpy as np
@@ -9,21 +23,38 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
+
     print('Hello! Let\'s explore some US bikeshare data!')
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    print('----------------------------------------')
 
+    # get user input for city
+    while True:
+        city = input("Which city would you like to analyze? Chicago, New York City, or Washington?\n").lower()
+        if city in ('chicago', 'new york city', 'washington'):
+            break
+        else:
+            print("Invalid city. Please choose from Chicago, New York City, or Washington.")
 
-    # get user input for month (all, january, february, ... , june)
+    # get user input for month
+    while True:
+        month = input("Which month? January, February, ... June, or 'all'?\n").lower()
+        if month in ('january', 'february', 'march', 'april', 'may', 'june', 'all'):
+            break
+        else:
+            print("Invalid month. Please choose a month between January and June, or 'all'.")
 
-
-    # get user input for day of week (all, monday, tuesday, ... sunday)
-
+    # get user input for day of week
+    while True:
+        day = input("Which day? Monday, Tuesday, ... Sunday, or 'all'?\n").lower()
+        if day in ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all'):
+            break
+        else:
+            print("Invalid day. Please enter an actual day name or 'all'.")
 
     print('-'*40)
     return city, month, day
